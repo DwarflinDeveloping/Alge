@@ -45,7 +45,7 @@ namespace Alge
             else if (modus_alge.Checked)
             {
                 var Alge = new Random();
-                var Algen = new List<string> { "Alge 1", "Alge 2", "Alge 3", "Alge 4" };
+                var Algen = new List<string> { "Alge 2", "Alge 3", "Alge 4" };
                 int index2 = Alge.Next(Algen.Count);
                 ergebnis.Text = (Algen[index2]);
                 ergebnis.Visible = true;
