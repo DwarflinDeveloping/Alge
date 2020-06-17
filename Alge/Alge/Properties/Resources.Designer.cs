@@ -61,11 +61,30 @@ namespace Alge.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.IO.UnmanagedMemoryStream ähnlich wie System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream AlgeSound {
+            get {
+                return ResourceManager.GetStream("AlgeSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap c9223d5_lg {
+        internal static System.Drawing.Bitmap background {
             get {
-                object obj = ResourceManager.GetObject("c9223d5-lg", resourceCulture);
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_image {
+            get {
+                object obj = ResourceManager.GetObject("settings_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

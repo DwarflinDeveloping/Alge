@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.ergebnis = new System.Windows.Forms.Label();
             this.modus = new System.Windows.Forms.Label();
             this.modus_farbe = new System.Windows.Forms.RadioButton();
             this.modus_alge = new System.Windows.Forms.RadioButton();
+            this.button_alge = new System.Windows.Forms.Button();
+            this.settings = new System.Windows.Forms.PictureBox();
+            this.credits = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.settings)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // ergebnis
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Rubik", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(63, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(541, 114);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ERGEBNIS";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ergebnis.AutoSize = true;
+            this.ergebnis.BackColor = System.Drawing.Color.Transparent;
+            this.ergebnis.Font = new System.Drawing.Font("Rubik", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ergebnis.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ergebnis.Location = new System.Drawing.Point(63, 90);
+            this.ergebnis.Name = "ergebnis";
+            this.ergebnis.Size = new System.Drawing.Size(541, 114);
+            this.ergebnis.TabIndex = 0;
+            this.ergebnis.Text = "ERGEBNIS";
+            this.ergebnis.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ergebnis.Visible = false;
             // 
             // modus
             // 
@@ -87,19 +92,59 @@
             this.modus_alge.Text = "Alge";
             this.modus_alge.UseVisualStyleBackColor = false;
             // 
+            // button_alge
+            // 
+            this.button_alge.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_alge.Location = new System.Drawing.Point(246, 284);
+            this.button_alge.Name = "button_alge";
+            this.button_alge.Size = new System.Drawing.Size(163, 71);
+            this.button_alge.TabIndex = 4;
+            this.button_alge.Text = "ALGE";
+            this.button_alge.UseVisualStyleBackColor = true;
+            this.button_alge.Click += new System.EventHandler(this.button_alge_Click);
+            // 
+            // settings
+            // 
+            this.settings.BackColor = System.Drawing.Color.Transparent;
+            this.settings.Image = global::Alge.Properties.Resources.settings_image;
+            this.settings.Location = new System.Drawing.Point(588, 322);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(50, 50);
+            this.settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.settings.TabIndex = 5;
+            this.settings.TabStop = false;
+            this.settings.Click += new System.EventHandler(this.settings_Click);
+            // 
+            // credits
+            // 
+            this.credits.AutoSize = true;
+            this.credits.BackColor = System.Drawing.Color.Transparent;
+            this.credits.LinkColor = System.Drawing.Color.White;
+            this.credits.Location = new System.Drawing.Point(11, 362);
+            this.credits.Name = "credits";
+            this.credits.Size = new System.Drawing.Size(83, 13);
+            this.credits.TabIndex = 6;
+            this.credits.TabStop = true;
+            this.credits.Text = "Alge by Paxonic";
+            this.credits.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.credits_LinkClicked);
+            // 
             // Alge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Alge.Properties.Resources.c9223d5_lg;
+            this.BackgroundImage = global::Alge.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(647, 384);
+            this.Controls.Add(this.credits);
+            this.Controls.Add(this.settings);
+            this.Controls.Add(this.button_alge);
             this.Controls.Add(this.modus_alge);
             this.Controls.Add(this.modus_farbe);
             this.Controls.Add(this.modus);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ergebnis);
             this.Name = "Alge";
             this.Text = "Alge";
+            ((System.ComponentModel.ISupportInitialize)(this.settings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,10 +152,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ergebnis;
         private System.Windows.Forms.Label modus;
         private System.Windows.Forms.RadioButton modus_farbe;
         private System.Windows.Forms.RadioButton modus_alge;
+        private System.Windows.Forms.Button button_alge;
+        private System.Windows.Forms.PictureBox settings;
+        private System.Windows.Forms.LinkLabel credits;
     }
 }
 
